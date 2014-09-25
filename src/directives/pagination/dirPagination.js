@@ -207,6 +207,10 @@
                 }, function(currentPage) {
                     goToPage(currentPage);
                 });
+                
+                scope.$on('resetPage', function() {
+                    scope.pagination.current = 1;
+                });
 
                 scope.setCurrent = function(num) {
                     if (isValidPageNumber(num)) {
