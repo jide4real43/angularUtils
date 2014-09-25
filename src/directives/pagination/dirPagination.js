@@ -209,7 +209,7 @@
                 });
                 
                 scope.$on('resetPage', function() {
-                    scope.pagination.current = 1;
+                    paginationService.setCurrentPage(paginationId, 1);
                 });
 
                 scope.setCurrent = function(num) {
